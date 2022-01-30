@@ -47,8 +47,8 @@ def get_config(
                         "extra_info": {
                             "loss": {
                                 "np": {"bce": 1, "dice": 1},
-                                "hv": {"mse": 1, "msge": 1},
-                                "tp": {"bce": 1, "dice": 1},
+                                "hv": {"mse": 2, "msge": 1},
+                                "tp": {"bce": 2, "dice": 1},
                             },
                         },
 
@@ -65,7 +65,7 @@ def get_config(
 
                 'loader': loader_kwargs,
 
-                'nr_epochs': 50,
+                'nr_epochs': 25,
             },
             {
                 'run_info': {
@@ -91,8 +91,8 @@ def get_config(
                         "extra_info": {
                             "loss": {
                                 "np": {"bce": 1, "dice": 1},
-                                "hv": {"mse": 1, "msge": 1},
-                                "tp": {"bce": 1, "dice": 1},
+                                "hv": {"mse": 2, "msge": 1},
+                                "tp": {"bce": 2, "dice": 1},
                             },
                         },
 
@@ -109,7 +109,7 @@ def get_config(
 
                 'loader': loader_kwargs,
 
-                'nr_epochs': 50,
+                'nr_epochs': 25,
             },
         ],
 
