@@ -10,8 +10,8 @@ loader_kwargs:
   # train: { 'batch_size' : 6, 'nr_procs' : 8}
   # infer: { 'batch_size' : 6, 'nr_procs' : 8}
   # phase 2
-  train: { 'batch_size' : 6, 'nr_procs' : 8}
-  infer: { 'batch_size' : 6, 'nr_procs' : 8}
+  train: { 'batch_size' : 4, 'nr_procs' : 8}
+  infer: { 'batch_size' : 4, 'nr_procs' : 8}
 
 model_kwargs:
   num_types: 7  # conic
