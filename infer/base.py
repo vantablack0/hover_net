@@ -65,7 +65,7 @@ class InferManager(object):
         saved_state_dict = torch.load(self.method["model_path"])["desc"]
         saved_state_dict = convert_pytorch_checkpoint(saved_state_dict)
 
-        net.load_state_dict(saved_state_dict, strict=True)
+        net.load_state_dict(saved_state_dict, strict=False)
         net = torch.nn.DataParallel(net)
         net = net.to("cuda")
 
