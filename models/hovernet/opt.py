@@ -48,7 +48,7 @@ def get_config(
                             "loss": {
                                 "np": {"bce": 1, "dice": 1},
                                 "hv": {"mse": 2, "msge": 1},
-                                "tp": {"bce": 2, "dice": 1},
+                                "tp": {"bce": 2, "dice": 2},
                             },
                         },
 
@@ -92,7 +92,7 @@ def get_config(
                             "loss": {
                                 "np": {"bce": 1, "dice": 1},
                                 "hv": {"mse": 2, "msge": 1},
-                                "tp": {"bce": 2, "dice": 1},
+                                "tp": {"bce": 2, "dice": 2},
                             },
                         },
 
