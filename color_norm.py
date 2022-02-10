@@ -21,7 +21,7 @@ cnorm = {
 }
 
 DATA_DIR = 'exp_output/local/data'
-imgs = np.'{DATA_DIR}/images.npy')
+imgs = np.load('{DATA_DIR}/images.npy')
 
 imgs_norm = reinhard(
     imgs, target_mu=cnorm['mu'], target_sigma=cnorm['sigma'])
