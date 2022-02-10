@@ -20,9 +20,10 @@ cnorm = {
     'sigma': np.array([0.6135447, 0.10989545, 0.0286032]),
 }
 
+DATA_DIR = 'exp_output/local/data'
 imgs = np.'{DATA_DIR}/images.npy')
 
 imgs_norm = reinhard(
     imgs, target_mu=cnorm['mu'], target_sigma=cnorm['sigma'])
 
-np.save('images.npy',imgs_norm)
+np.save('{DATA_DIR}/images.npy',imgs_norm)
