@@ -69,4 +69,4 @@ for i in range(imgs.shape[0]):
     imgs_norm[i] = colorjitter(imgs[i],cj)
     
 
-np.save('{DATA_DIR}/images.npy',imgs_norm)
+np.save(f'{DATA_DIR}/images.npy',imgs_norm)
