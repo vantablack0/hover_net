@@ -52,3 +52,21 @@ def colorjitter(img, cj_type="b"):
         dummy = np.clip(dummy, 0, 255)
         img = np.uint8(dummy)
         return img
+
+
+DATA_DIR = 'exp_output/local/data'
+imgs = np.load(f'{DATA_DIR}/images.npy')
+imgs_norm = np.zeros(imgs.shape)
+
+for i in range(imgs.shape[0]):
+    cj = np.random.randint(low=1,high=3,size=1)
+    if cj == 1:
+        cj = 'b'
+    elif cj ==2:
+        cj = 's'
+    elif cj == 3:
+        cj = 'c'
+    imgs_norm[i] = colorjitter(imgs[i],cj)
+    
+
+np.save('{DATA_DIR}/images.npy',imgs_norm)
