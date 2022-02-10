@@ -22,8 +22,10 @@ cnorm = {
 
 DATA_DIR = 'exp_output/local/data'
 imgs = np.load(f'{DATA_DIR}/images.npy')
+imgs_norm = np.zeros(imgs.shape)
 
-imgs_norm = reinhard(
-    imgs, target_mu=cnorm['mu'], target_sigma=cnorm['sigma'])
+for i in range(imgs.shape[0]):
+    imgs_norm[i] = reinhard(imgs[i], target_mu=cnorm['mu'], target_sigma=cnorm['sigma'])
+    
 
 np.save('{DATA_DIR}/images.npy',imgs_norm)
